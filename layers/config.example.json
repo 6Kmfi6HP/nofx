@@ -1,0 +1,33 @@
+{
+  "data_layer": {
+    "data_sources": ["binance", "hyperliquid"],
+    "min_data_quality": 0.8,
+    "max_account_risk_percent": 2.0,
+    "max_single_trade_risk_percent": 1.0,
+    "default_leverage": 3,
+    "max_leverage": 5,
+    "circuit_breaker_enabled": true,
+    "max_daily_loss_percent": 5.0,
+    "max_consecutive_losses": 3
+  },
+  "ai_layer": {
+    "provider": "deepseek",
+    "model": "deepseek-chat",
+    "api_key": "YOUR_DEEPSEEK_API_KEY",
+    "base_url": "",
+    "min_confidence": 0.75,
+    "enable_chain_of_thought": true,
+    "max_prompt_length": 650,
+    "max_decisions_per_hour": 2,
+    "cooldown_minutes": 30
+  },
+  "execution_layer": {
+    "enable_secondary_risk_check": true,
+    "max_slippage_percent": 0.5,
+    "order_timeout_seconds": 30,
+    "enable_position_sizing": true,
+    "position_sizing_method": "volatility",
+    "dry_run": false,
+    "require_manual_confirmation": false
+  }
+}
